@@ -11,11 +11,25 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import 'hammerjs';
 import { ProjectComponent } from './project/project.component';
+import { ProjectService } from './services/project.service';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { TeamComponent } from './team/team.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectComponent
+    ProjectComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    TeamComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
@@ -25,10 +39,11 @@ import { ProjectComponent } from './project/project.component';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AppRoutingModule 
   
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

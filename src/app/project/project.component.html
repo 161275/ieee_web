@@ -14,14 +14,14 @@
 
   <div fxFlex>
     <div>
-      <h3>Menu</h3>
+      <h3>projects</h3>
       <hr>
     </div>
   </div>
 
   <div fxFlex>
     <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let project of projects">
+      <mat-grid-tile *ngFor="let project of projects" (click) = "onSelect(project)">
         <img height="200px" src={{project.image}} alt={{project.name}}>
         <mat-grid-tile-footer>
           <h1>{{project.name | uppercase}}</h1>
